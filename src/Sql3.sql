@@ -38,13 +38,13 @@ WHERE id = 6;
 -- 1
 SELECT first_name, last_name, city_name
 FROM employee e
-JOIN city c ON e.city_id = c.city_id;
+INNER JOIN city c ON e.city_id = c.city_id;
 
 -- или сокращенная запись
 
 SELECT first_name, last_name, city_name
 FROM employee
-JOIN city USING(city_id);
+INNER JOIN city USING(city_id);
 
 --2
 INSERT INTO employee (first_name, last_name, gender, age)
